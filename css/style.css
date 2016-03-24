@@ -4,15 +4,18 @@ body {
 	color: green;
 }
 
-header h1 {
+header {
 	/*max-width: 50%; */ /*makes display on left side?*/
 	display: flex;
   	align-items: center;
   	justify-content: center;
+  	}
+
+h1 {
   	font-size: 3em;
   	margin: 0;
-  	
-
+  	max-width: 50%;
+  
   }
 
 .topInfo {
@@ -23,13 +26,16 @@ header h1 {
 }
 
 .quizzStart {
-	display: flex;
-  	align-items: center;
-  	justify-content: center;
+	text-align: center;
   }
 
   .startbutton {
 	display: block;
   	align-items: center;
   	justify-content: center;
+
+  }
+
+  .question {
+  	display: none;
   }
