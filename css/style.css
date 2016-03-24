@@ -38,8 +38,7 @@ h1 {
 
   .question {
   	display: none;
-  	align-items: center;
-  	justify-content: center;
+ 	text-align: center;
 
   }
 
