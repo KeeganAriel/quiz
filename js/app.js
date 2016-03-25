@@ -35,7 +35,7 @@
 $(document).ready(function() { 
 
 	$('button').click(function() {
-		$('.quizzStart').hide();
+		$('.quizStart').hide();
 		$('.question').show();
 	});
 
