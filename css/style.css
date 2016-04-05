@@ -14,9 +14,15 @@ header {
 
 h1 {
   	font-size: 3em;
-  	margin: 0;
+  	margin-bottom: 2em;
   	max-width: 50%;
   
+  }
+
+  a {
+    color: green;
+    text-decoration: none;
+
   }
 
 .topInfo {
@@ -31,6 +37,14 @@ h1 {
 	font-size: 1.5em;
 	margin-top: 2em;
 	margin-bottom: 4em;
+	border: 2px solid green;
+	width: 20em;
+	height: 6em;
+	border-radius: 6px;
+/*	display: ;*/
+	margin: auto;
+
+
   }
 
  /*tired with .quizStart p and didn't target*/
@@ -41,7 +55,7 @@ h1 {
  button {
   	align-items: center;
   	justify-content: center;
-  	border-radius: 12px;
+  	border-radius: 6px;
   	border: none;
   	background-color: green;
   	color: black;
@@ -69,7 +83,7 @@ h1 {
 .submitButton {
     align-items: center;
   	justify-content: center;
-  	border-radius: 12px;
+  	border-radius: 6px;
   	border: none;
   	background-color: green;
   	color: black;
