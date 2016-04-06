@@ -105,8 +105,12 @@ h1 {
   margin: auto;
 }
 
+.bottom {
+  display: none;
+}
+
   .bottomInfo {
-  	display: flex;
+  display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
 	list-style: none;
