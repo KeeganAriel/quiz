@@ -88,6 +88,8 @@ $(document).ready(function() {
 		$('.quizStart').hide();
 		$('.question').show();
 		$('.quizEnd').hide();
+		$('.bottom').show();
+
 		questions[currentQuestionIndex].display();
 
 	});
@@ -105,7 +107,8 @@ $(document).ready(function() {
 		}
 		console.log(score);
 
-		$right.append("<li>" + score + "</li>");
+		$('#right').append(score);
+		$('#count').append(currentQuestionIndex + 1);
 
 
 		currentQuestionIndex++;
@@ -114,7 +117,6 @@ $(document).ready(function() {
 			} else {
 				$('.question').hide();
 				$('.quizEnd').show();
-				// add div of this
 			}
 
 
@@ -126,7 +128,7 @@ $(document).ready(function() {
 
 
 		// when you click the submit buttion
-		// get user imput from radio button
+		// get user imput from radio button`
 			// get selected radio button value
 		// compare to right answer 
 		// add to counter
@@ -144,10 +146,22 @@ var newGame = function() {
 	$('.question').hide();
 	$('.quizStart').show();
 	$('.quizEnd').hide();
+	$('.bottom').hide();
+
+
 	};
+
+var aboutMe = function() {
+	$('.aboutInfo').fadeIn();
+};
 
 $("a.new").click(function() {
 	newGame();
+
+$("a.about").click(function() {
+	aboutMe();
+});
+
 });
  
 });
