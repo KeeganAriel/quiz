@@ -90,6 +90,19 @@ h1 {
 /*  	padding: 1.5em 4em;*/
   	font-size: 1.3em;
   	margin-top: 1em;
+
+}
+
+.quizEnd {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 2px solid green;
+  width: 15em;
+  border-radius: 6px;
+  display: none;
+  margin: auto;
 }
 
   .bottomInfo {
@@ -99,4 +112,8 @@ h1 {
 	list-style: none;
 	font-size: 1.3em;
 
+  }
+
+  .right {
+    margin: 1em;
   }
