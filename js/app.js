@@ -75,6 +75,8 @@ var score = 0;
 
 var currentQuestionIndex = 0;
 
+var $right = $("#right");
+
 
 	// var random = Math.floor(Math.random() * $('.item').length);
 	// $('.item').hide().eq(random).show();
@@ -85,6 +87,7 @@ $(document).ready(function() {
 	$('button').click(function() {
 		$('.quizStart').hide();
 		$('.question').show();
+		$('.quizEnd').hide();
 		questions[currentQuestionIndex].display();
 
 	});
@@ -101,13 +104,19 @@ $(document).ready(function() {
 			console.log("NOOOOOOOOOO!");
 		}
 		console.log(score);
+
+		$right.append("<li>" + score + "</li>");
+
+
 		currentQuestionIndex++;
 			if (currentQuestionIndex <= 4) {
 				questions[currentQuestionIndex].display();
 			} else {
-				console.log("Game Over!");
+				$('.question').hide();
+				$('.quizEnd').show();
+				// add div of this
 			}
-		
+
 
 
 
@@ -134,6 +143,7 @@ var newGame = function() {
 	// display start page
 	$('.question').hide();
 	$('.quizStart').show();
+	$('.quizEnd').hide();
 	};
 
 $("a.new").click(function() {
