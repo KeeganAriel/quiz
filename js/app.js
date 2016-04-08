@@ -1,8 +1,3 @@
-// // };
-// make interface
-// display eustion obj
-// quiz object: tracking
-
 // prototype
 var Question = function(question, answers, rightAnswer){
 	this.question = question;
@@ -27,6 +22,24 @@ Question.prototype.display = function() {
 	$('.C input').val(options[2]);
 	$('.D span').text(options[3]);
 	$('.D input').val(options[3]);
+};
+
+var Quiz = function(questions) {
+	this.score = 0;
+	this.currentQuestionIndex = 0;
+	this.questions = questions;
+	this.shuffle();
+
+
+};
+
+Quiz.prototype.shuffle = function() {
+	this.questions = _.shuffle(this.questions);
+
+};
+
+Quiz.prototype.currentQuestion = function() {
+	return this.questions[this.currentQuestionIndex];
 };
 
 
@@ -69,20 +82,12 @@ var existenzQuestion = new Question (
 );
 
 var questions = [existenzQuestion, netQuestion, jnQuestion, hackersQuestion, matrixQuestion];
-	questions = _.shuffle(questions);
 
-var score = 0;
-
-var currentQuestionIndex = 0;
-
-var $right = $("#right");
-
-
-	// var random = Math.floor(Math.random() * $('.item').length);
-	// $('.item').hide().eq(random).show();
-		// uses this to random array so Qs are mixed up?
+var quiz = new Quiz(questions);
 
 $(document).ready(function() { 
+
+	var $right = $("#right");
 
 	$('button').click(function() {
 		$('.quizStart').hide();
@@ -90,33 +95,31 @@ $(document).ready(function() {
 		$('.quizEnd').hide();
 		$('.bottom').show();
 
-		questions[currentQuestionIndex].display();
+		quiz.currentQuestion().display();
 
 	});
 
-
-
+ 
 	$('.submitButton').click(function() {
 		event.preventDefault();
 		var userAnswer = $('input[name=answer]:checked').val();
-		if (questions[currentQuestionIndex].rightAnswer === userAnswer) {
-			console.log("You got it right!!!!!");
-			score = score + 1;
-		} else {
-			console.log("NOOOOOOOOOO!");
+		if (quiz.currentQuestion().rightAnswer === userAnswer) {
+			quiz.score = quiz.score + 1;
 		}
-		console.log(score);
 
-		$('#right').append(score);
-		$('#count').append(currentQuestionIndex + 1);
+		$right.text(quiz.score);
+		$('#count').text(quiz.currentQuestionIndex + 1);
 
 
-		currentQuestionIndex++;
-			if (currentQuestionIndex <= 4) {
-				questions[currentQuestionIndex].display();
+		quiz.currentQuestionIndex++;
+			if (quiz.currentQuestionIndex <= 4) {
+				quiz.currentQuestion().display();
 			} else {
 				$('.question').hide();
 				$('.quizEnd').show();
+				$('#rightTotal').text(quiz.score);
+				$('.bottom').hide();
+
 			}
 
 
@@ -147,21 +150,23 @@ var newGame = function() {
 	$('.quizStart').show();
 	$('.quizEnd').hide();
 	$('.bottom').hide();
-
+	$('#right').text(0);
+	$('#count').text(0);
+	quiz = new Quiz(questions);
 
 	};
 
 var aboutMe = function() {
-	$('.aboutInfo').fadeIn();
+	$('.aboutInfo').alert('test');
+
 };
 
 $("a.new").click(function() {
 	newGame();
-
-$("a.about").click(function() {
-	aboutMe();
 });
 
+$("a.about").click(function() {
+	$('.aboutInfo').dialog();
 });
  
 });

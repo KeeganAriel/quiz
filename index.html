@@ -5,66 +5,69 @@
 	<title>Getting Quizy With It!</title>
 	<script type="text/javascript" src="js/underscore.js"></script>
 	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.custom/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<nav class="top">
-	<ul class="topInfo">
-		<li>
-			<a class="about" href="#">About This Quiz:</a>
-				<article class="aboutInfo">This quiz is written by Keegan Ariel. She made this to practice using her her kickass Jquery skills. This is a project for Thinkful.></article>
+		<ul class="topInfo">
+			<li>
+				<a class="about" href="#">About This Quiz:</a>
+				<article class="aboutInfo">This quiz is written by Keegan Ariel. She made this to practice using her kickass Jquery skills. This is a project for Thinkful.</article>
 
 
-		</li>
-		<li>
-			<a class="new" href="#">Start a new quiz:</a>
-		</li>
-	</ul>
+			</li>
+			<li>
+				<a class="new" href="#">Start a new quiz:</a>
+			</li>
+		</ul>
 	</nav>
-	 <header>
-	 <h1>Can You Name The Best 90’s Computer Nerd Movies Of All Time?</h1>
+	<header>
+		<h1>Are You A Nerd For<br>90's Computer Movies?</h1>
 	</header>
 	
-	<div class="quizStart">
-	 <p class="startText">Are You Prepared?</p>
-	 <button type="button" class="startButton">START</button>
-	</div>
+	<section class="quizStart">
+		<p class="startText">Are You Prepared?</p>
+		<button type="button" class="startButton">START</button>
+	</section> 
 
- 	<div class="question">
- 		<p class="questionText">What is the best 90's computer movie?</p>
- 		<form>
- 		 	<ul class="answers">
- 		 	 	<!-- radio buttons -->
- 		 	 	<!-- <input type="radio" name="answer" value=""></input> -->
-	 		 	<li class="A">
-	 		 		<input type="radio" name="answer" value="A"></input>
-	 		 		<span>First Answer</span>
-	 		 	</li>
-	 		 	
-	 		 	<li class="B">
-	 		 		<input type="radio" name="answer" value="B"></input>
-	 		 		<span>2nd Answer</span>
-	 		 	</li>
-	 		 	
-	 		 	<li class="C">
-	 		 		 	<input type="radio" name="answer" value="C"></input>
-	 		 		<span>3rd Answer</span>
-	 		 	</li>
- 		 		
-	 		 	<li class="D">
-	 		 			<input type="radio" name="answer" value="D"></input>
-	 		 		<span>4th Answer</span>
-	 		 	</li>
- 		 		<!-- submit button -->
- 		 		<input type="submit" value="SUBMIT" class="submitButton"></input>
- 		 	</ul>
- 		 </form>
- 	</div>
+	<section class="question">
+		<p class="questionText">What is the best 90's computer movie?</p>
+		<form>
+			<ul class="answers">
+				<!-- radio buttons -->
+				<!-- <input type="radio" name="answer" value=""></input> -->
+				<li class="A">
+					<input type="radio" name="answer" value="A"></input>
+					<span>First Answer</span>
+				</li>
 
- 	<div class="quizEnd">
-	 <p class="endText">GAME OVER!!!!</p>
-	</div>
+				<li class="B">
+					<input type="radio" name="answer" value="B"></input>
+					<span>2nd Answer</span>
+				</li>
+
+				<li class="C">
+					<input type="radio" name="answer" value="C"></input>
+					<span>3rd Answer</span>
+				</li>
+
+				<li class="D">
+					<input type="radio" name="answer" value="D"></input>
+					<span>4th Answer</span>
+				</li>
+				<!-- submit button -->
+				<input type="submit" value="SUBMIT" class="submitButton"></input>
+			</ul>
+		</form>
+	</section> 
+
+	<section class="quizEnd">
+		<p class="endText">GAME OVER!!!!</p>
+		<p class="counters">You got <span id="rightTotal">0</span> right!!</p>
+	</section> 
 
 	<footer class="bottom">
 		<ul class="bottomInfo">

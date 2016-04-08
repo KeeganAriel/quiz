@@ -1,3 +1,7 @@
+* {
+  Box-sizing: Border-box;
+}
+
 body {
 	font-family: "Aldrich", Courier, monospace;
 	background-color: black;
@@ -5,34 +9,49 @@ body {
 }
 
 header {
-	/*max-width: 50%; */ /*makes display on left side?*/
-	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	margin-top: 2em;
-  	}
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+
+}
 
 h1 {
-  	font-size: 3em;
-  	margin-bottom: 2em;
-  	max-width: 50%;
-  
-  }
+ font-size: 2.2em;
+ margin-bottom: 2em;
+ max-width: 50%;
+ text-align: center;
 
-  a {
-    color: green;
-    text-decoration: none;
 
-  }
+}
+
+h2 {
+  font-size: 1.8em;
+  max-width: 50%;
+
+}
+a {
+  color: green;
+  text-decoration: none;
+
+}
+
+.aboutInfo {
+  display: none;
+
+}
 
 .topInfo {
 	display: flex;
 	justify-content: space-between;
 	list-style: none;
 	font-size: 1.3em;
+  padding-right: 2em;
+  padding-left: 2em;
 }
 
-.quizStart {
+.quizStart, .quizEnd {
 	text-align: center;
 	font-size: 1.5em;
 	margin-top: 2em;
@@ -41,83 +60,93 @@ h1 {
 	width: 20em;
 	height: 6em;
 	border-radius: 6px;
-/*	display: ;*/
-	margin: auto;
+  margin: auto;
 
 
-  }
+}
 
- /*tired with .quizStart p and didn't target*/
- .startText {
+/*tired with .quizStart p and didn't target*/
+.startText {
 	margin-bottom: .5em;
- }
+}
 
- button {
-  	align-items: center;
-  	justify-content: center;
-  	border-radius: 6px;
-  	border: none;
-  	background-color: green;
-  	color: black;
-/*  	padding: 1.5em 4em;*/
-  	font-size: 1.3em;
-  	margin-top: .5em;
-
-
-
-  }
-
-  .question {
-  	display: none;
- 	text-align: center;
- 	font-size: 1.5em;
+button {
+ align-items: center;
+ justify-content: center;
+ border-radius: 6px;
+ border: none;
+ background-color: green;
+ color: black;
+ /*  	padding: 1.5em 4em;*/
+ font-size: 1.3em;
+ margin-top: .5em;
 
 
-  }
 
-  .answers {
-  	list-style: none;
-  	font-size: 1.2em;
-  }
+}
+
+.question {
+  display: none;
+  /* 	text-align: center;*/
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 1.2em;
+
+
+}
+
+.answers {
+ list-style: none;
+ font-size: 1.1em;
+ margin-left: 12%;
+}
 
 .submitButton {
-    align-items: center;
-  	justify-content: center;
-  	border-radius: 6px;
-  	border: none;
-  	background-color: green;
-  	color: black;
-/*  	padding: 1.5em 4em;*/
-  	font-size: 1.3em;
-  	margin-top: 1em;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: none;
+  background-color: green;
+  color: black;
+  /*  	padding: 1.5em 4em;*/
+  font-size: 1.3em;
+  margin-top: 1.5em;
+  margin-left: 2em;
 
 }
 
 .quizEnd {
-  text-align: center;
-  font-size: 2em;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  border: 2px solid green;
-  width: 15em;
-  border-radius: 6px;
   display: none;
-  margin: auto;
+}
+
+.endText {
+  font-size: 1.5em;
+  margin-bottom: .6em;
+  margin-top: .6em;
+
+}
+
+.counters {
+  font-size: 1em;
+  margin-top: 0;
+
 }
 
 .bottom {
   display: none;
 }
 
-  .bottomInfo {
+.bottomInfo {
   display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-	list-style: none;
-	font-size: 1.3em;
+  justify-content: space-between;
+  align-items: flex-end;
+  list-style: none;
+  font-size: 1.3em;
+  padding-right: 2em;
+  padding-left: 2em;
 
-  }
+}
 
-  .right {
-    margin: 1em;
-  }
+.right {
+  margin: 1em;
+}
